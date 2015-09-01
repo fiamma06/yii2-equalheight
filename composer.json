@@ -17,7 +17,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"fiamma06\\equalheight\\": "src\\"
+			"fiamma06\\equalheight\\": "src"
 		}
 	}
 }
