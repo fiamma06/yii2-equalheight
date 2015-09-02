@@ -6,11 +6,22 @@ use yii\web\AssetBundle;
 
 class EqualHeightAsset extends AssetBundle
 {
+    /**
+     * @var string
+     */
+    public $sourcePath = '@vendor/bower/jquery.equalheights';
+
+    /**
+     * @var array
+     */
     public $depends = [
         'yii\web\JqueryAsset',
     ];
 
+    /**
+     * @var array
+     */
     public $js = [
-        '@bower\jquery.equalheights\jquery.equalheights.min.js',
+        'jquery.equalheights.min.js',
     ];
 }

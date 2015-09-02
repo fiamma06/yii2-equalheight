@@ -12,6 +12,13 @@ use yii\base\Widget;
 class EqualHeight extends Widget
 {
     /**
+     * Elements in div
+     *
+     * @var string
+     */
+    public $selector = '.equalHeight';
+
+    /**
      * Run
      */
     public function run() {
@@ -31,7 +38,10 @@ class EqualHeight extends Widget
      */
     public function registerJS() {
         $this->getView()->registerJS("(function($){
-            $('{$this->getId()}').equalHeight();
-        })(jQuery)");
+            $(window).resize(function() {
+                $('{$this->selector}').css('height', 'auto');
+                $('{$this->selector}').equalHeights();
+            }).trigger('resize');
+        })(jQuery);");
     }
 }
