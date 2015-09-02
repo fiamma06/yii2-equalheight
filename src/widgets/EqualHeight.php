@@ -39,8 +39,7 @@ class EqualHeight extends Widget
     public function registerJS() {
         $this->getView()->registerJS("(function($){
             $(window).resize(function() {
-                $('{$this->selector}').css('height', 'auto');
-                $('{$this->selector}').equalHeights();
+                $('{$this->selector}').css('height', 'auto').equalHeights();
             }).trigger('resize');
         })(jQuery);");
     }
